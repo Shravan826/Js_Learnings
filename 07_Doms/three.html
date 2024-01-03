@@ -1,0 +1,28 @@
+<!-- Add Edit elements using DOM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  
+</body>
+<script>
+  const div = document.createElement('div');
+  console.log(div);
+  div.className = "main";
+  div.id = 'myId';
+  div.setAttribute("title","Generated Title");
+  div.style.backgroundColor = "Green";
+  div.style.padding = '15px';
+  //div.innerText = 'Chai Aur Code';
+  //Alternate way to add text
+  const addText = document.createTextNode("Chai Aur Code");
+  div.appendChild(addText);
+
+  //have to provide the full path starting from document.
+  document.body.appendChild(div);
+</script>
+</html>
