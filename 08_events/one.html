@@ -37,7 +37,7 @@
 <script>
   // This will give less features so it is not best apporoach
   document.getElementById('owl').onclick = function (){
-    alert('owl Clicked');
+    //alert('owl Clicked');
   }
 
   //Also other ways:
@@ -53,12 +53,50 @@
     //clientX, clientY, screenX, screenY
     //altKey, ctrlKey, shifykey, keycode
   document.getElementById('owl').addEventListener('click', function (e) {
-    console.log(e);
+   // console.log(e);
   }, false)
 //type, timestamp, defaultPrevented
 //target toElement, srcElement, currentTarget,
 //clientX, clientY, screenX, screenY
 //altKey, ctrlKey, shifykey, keycode
   
+//Third parameter of addEventListner() is used for event propogation 
+document.getElementById('images').addEventListener('click',function(e){
+  console.log('Clicked Inside the Ul');
+}, false);
+
+// document.getElementById('owl').addEventListener('click',function(e){
+//   console.log("owl clicked");
+// }, true);
+
+// default is also false. If both are falsed or upper element is falsed then clicked event it will be work as bubbling means 1st work the current elememt's event then its aboved.
+
+//It is said as capturing mode which goes up to down. If both are true or upper element is true then it will work in order from upper to current clicked element.
+
+//For stoping the buubling and capturing and only making work the current event we can stop the propagation with this method e.stopPropagation()
+  // document.getElementById('owl').addEventListener('click', function (e) {
+  //   console.log("owl clicked");
+  //   e.stopPropagation();
+  // }, false);
+
+
+  //e.preventDefault();- it will not redirect when click on the link.
+  // document.getElementById('google').addEventListener('click',function(e){
+  //   console.log("Google clicked");
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  // },false)
+
+
+  
+  //In this we will remove each image on click
+  document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+      console.log(e.target.id);
+      e.target.parentNode.remove();
+    }
+  },false)
+
 </script>
 </html>
