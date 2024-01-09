@@ -1,0 +1,24 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Shravan826@github.com/Shravan826/Js_Learnings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shravan826/Js_Learnings/issues"
+  },
+  "homepage": "https://github.com/Shravan826/Js_Learnings#readme",
+  "dependencies": {
+    "cross-fetch": "^4.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}

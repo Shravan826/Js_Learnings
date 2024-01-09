@@ -1,0 +1,3 @@
+//Fetch:- For the fetch in the web api it is treated as top priority means for the fetch() methods there are special queue names as "Micro task Queue" in that all the fetch() method is passed and from that queue fetch() method will run first before the method of other task queue.
+
+// when we call fetch() on that time two process behind the hood is running one is for data, onfulfilled[fn] aka resolve(), onRejection[fn] aka reject().  2nd is for sending network request via web Browser or node. If that requet reached to the server then it will always falls in onFulfilled and if it is not able to reach the server then it will fallls under on Rejection.
